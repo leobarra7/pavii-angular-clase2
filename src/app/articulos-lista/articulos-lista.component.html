@@ -1,4 +1,5 @@
-<table class="table table-striped">
+<input type="button" (click)='MostrarOcultarGrilla()' value={{mensajeBoton}}/>
+<table class="table table-striped" *ngIf='verGrilla'>
   <thead class="thead-inverse">
     <tr>
       <th>Id del Articulo</th>

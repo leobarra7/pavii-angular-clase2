@@ -9,10 +9,17 @@ import {ArticulosFamilias} from '../models/articulosfamilia-coleccion';
 })
 export class ArticulosListaComponent implements OnInit {
   listaArticulos: ArticuloFamilia[];
+  verGrilla = false;
+  mensajeBoton = 'Mostrar Grilla';
 
   constructor() {}
 
   ngOnInit(): void {
     this.listaArticulos = ArticulosFamilias;
+  }
+  MostrarOcultarGrilla(){
+    this.mensajeBoton = this.verGrilla?'Mostrar Grilla':'Ocultar Grilla';
+    this.verGrilla = !this.verGrilla;
+  
   }
 }
